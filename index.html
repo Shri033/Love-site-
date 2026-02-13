@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>For My Love 💗</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body onload="openPopup(); notifyMe();">
+
+  <!-- Background Music -->
+  <audio autoplay loop class="music" controls>
+    <source src="aathi.mp3" type="audio/mp3">
+  </audio>
+
+  <!-- Popup Alert -->
+  <div id="popup" class="popup">
+    <div class="popup-box">
+      <h2>Pa 🥺💗</h2>
+      <p>
+        No need to open now... <br>
+        No need to answer now... <br><br>
+        Once you are comfortable open this 🖤✨
+      </p>
+
+      <div class="popup-btns">
+        <button class="btn" onclick="proceed()">Okay 💗</button>
+        <button class="btn cancel" onclick="closeWebsite()">Cancel 🖤</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Floating Hearts -->
+  <div class="hearts-container"></div>
+
+  <!-- Slides -->
+  <div class="slider">
+
+    <!-- Slide 1 -->
+    <section class="slide active">
+      <h1 class="title">Happy Valentine's Day 💗</h1>
+      <p class="subtitle">This is only for you 🖤✨</p>
+      <p class="hint">Go and explore my love 👉</p>
+    </section>
+
+    <!-- Slide 2 -->
+    <section class="slide">
+      <h2>💌 My Love Message</h2>
+      <p class="text">
+        My love… 🌙✨
+I don’t know how to explain it,
+but you feel like home to my heart. <br>
+        In a world full of noise,
+your love is my calm silence…
+the kind that heals me without words. <br><br>
+        I may not be perfect,
+but one thing is true—
+I love you deeply, endlessly, and purely. 💗 <br>
+        I want to hold your hand forever ♾️🖤💗
+      </p>
+    </section>
+
+    <!-- Slide 3 -->
+    <section class="slide">
+      <h2>😭 I Miss You</h2>
+      <p class="text">
+        I miss you in the quiet moments,
+in every little thing I do… <br>
+         My heart feels incomplete without you.
+Come back soon, my love. 💗<br><br>
+
+        Every second feels longer without your voice, <br>
+        I’m waiting… just to feel you close again🥺 <br><br>
+
+        Sometimes I open our chats and just stare... <br>
+        because I don’t know what to say 😭💗
+      </p>
+    </section>
+
+    <!-- Slide 4 -->
+    <section class="slide">
+      <h2>❤️ My Promise</h2>
+      <p class="text">
+        Pa… I promise you one thing,
+no matter what happens, I’ll never stop choosing you. 💗 <br><br>
+
+        I promise to stay when things get hard,
+to hold your hand even in silence,
+and to love you even on the days
+when words are not enough. <br>
+        I may not be perfect,
+but my love for you is real and pure.  <br>
+        Even if the whole world changes,
+my heart will still belong to you. ❤️ <br><br>
+
+        I promise… you’ll always have me. 🥺💍✨ <br>
+        I want forever love ♾️💗🖤
+      </p>
+    </section>
+
+    <!-- Slide 5 -->
+    <section class="slide">
+      <h2>🥺 Secret Message</h2>
+      <p class="text">
+        Tap the button only if you still feel something...
+      </p>
+
+      <button class="btn" onclick="revealSecret()">Tap 💗</button>
+
+      <p id="secret" class="text secret-text">
+        If you are still reading this... <br>
+        then maybe I still have a place in your heart 😭💗 <br>
+        I’m not asking you to forget everything…
+        I’m only asking you to remember my love 🥺💗 <br>
+      </p>
+    </section>
+
+    <!-- Slide 6 -->
+    <section class="slide">
+      <h2>📸 Our Beautiful Memories</h2>
+
+      <div class="gallery">
+        <div class="card">
+          <img src="C:\Users\GOD\Desktop\v\img1.png" alt="memory">
+          <p>✨ This smile is my favourite 💗</p>
+        </div>
+
+        <div class="card">
+          <img src="C:\Users\GOD\Desktop\v\img2.jpeg" alt="memory">
+          <p>🖤 You are my comfort zone</p>
+        </div>
+
+        <div class="card">
+          <img src="C:\Users\GOD\Desktop\v\img3.png" alt="memory">
+          <p>💗 My heart always chooses you</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Slide 7 -->
+    <section class="slide">
+      <h2>🥺 My Apology Letter</h2>
+      <p class="text">
+        I’m sorry, Pa… <br><br>
+        I never wanted to hurt you, even in the smallest way.If my words or actions made you feel sad, please believe me… it wasn’t my intention. <br>
+        You mean so much to me, more than you know.
+Sometimes I don’t express things properly, but my heart is always full of love for you. ❤️<br>
+
+        I hate seeing you upset, because your smile is my peace.
+Please forgive me… I promise I’ll understand you better and try harder. <br>
+        But my love for you is always true 😭💗 <br><br>
+
+        I’m not perfect… <br>
+        but my love for you is the purest thing in me 🥺💗 <br><br>
+
+        Please forgive me... <br>
+        I don’t want to lose you 😭🖤
+      </p>
+    </section>
+
+    <!-- Slide 8 -->
+    <section class="slide">
+      <h2>🌙 Shall We Start Again...?</h2>
+
+      <p class="text">
+        With less ego, more love, <br>
+        and a promise to never give up on us. ❤️✨ <br><br>
+
+        Shall we start again...? 🖤
+      </p>
+
+      <div class="btns">
+        <button class="btn" onclick="startAgainYes()">Yes 💗</button>
+        <button class="btn cancel" onclick="startAgainNo()">No 🖤</button>
+      </div>
+
+      <div id="finalMessage" class="finalMessage"></div>
+    </section>
+
+    <!-- Slide 9 -->
+    <section class="slide">
+      <h2>💗 End Note</h2>
+      <p class="text">
+        No matter what happens... <br>
+        I will always love you 🖤💗 <br><br>
+
+        Thank you for being in my life 😭✨ <br><br>
+
+        Forever Yours ♾️💗
+      </p>
+    </section>
+    <!-- Slide 10 (VIDEO SLIDE) -->
+    <section class="slide">
+      <h2>🎥 One Last Thing...</h2>
+      <p class="text">
+        I made this for you 🥺💗 <br>
+        Please watch till the end 🖤
+      </p>
+
+      <div class="video-box">
+        <video controls>
+          <source src="C:\Users\GOD\Desktop\v\video.mp4" type="video/mp4">
+          Your browser does not support video.
+        </video>
+      </div>
+
+      <p class="hint">I love you always 😭💗</p>
+    </section>
+
+  </div>
+
+  <!-- Navigation -->
+  <div class="nav">
+    <button class="btn cancel" onclick="prevSlide()">⬅ Prev</button>
+    <button class="btn" onclick="nextSlide()">Next ➡</button>
+  </div>
+
+  <!-- JavaScript -->
+  <script>
+    let currentSlide = 0;
+    const slides = document.querySelectorAll(".slide");
+
+    function showSlide(index) {
+      slides.forEach(slide => slide.classList.remove("active"));
+      slides[index].classList.add("active");
+      window.scrollTo({ top: 0, behavior: "smooth" });
+    }
+
+    function nextSlide() {
+      if (currentSlide < slides.length - 1) {
+        currentSlide++;
+        showSlide(currentSlide);
+      }
+    }
+
+    function prevSlide() {
+      if (currentSlide > 0) {
+        currentSlide--;
+        showSlide(currentSlide);
+      }
+    }
+
+    function openPopup() {
+      document.getElementById("popup").style.display = "flex";
+    }
+
+    function proceed() {
+      document.getElementById("popup").style.display = "none";
+      currentSlide = 1;
+      showSlide(currentSlide);
+    }
+
+    function closeWebsite() {
+      document.body.innerHTML = `
+        <div style="
+          height:100vh;
+          display:flex;
+          justify-content:center;
+          align-items:center;
+          flex-direction:column;
+          background:black;
+          color:pink;
+          font-size:22px;
+          text-align:center;
+        ">
+          <h2>Okay Love 🖤</h2>
+          <p>This page is closed 💗</p>
+          <p style="font-size:16px; opacity:0.7;">Come back when you feel comfortable 🥺</p>
+        </div>
+      `;
+
+      setTimeout(() => {
+        window.close();
+      }, 500);
+    }
+
+    function revealSecret() {
+      document.getElementById("secret").style.display = "block";
+    }
+
+    function startAgainYes() {
+      document.getElementById("finalMessage").innerHTML =
+        "😭💗 <br><br> I'm sorry Pa... 🥺🖤";
+    }
+
+    function startAgainNo() {
+      document.getElementById("finalMessage").innerHTML =
+        "Thank you ❤️ <br><br> Love you as always 🖤💗";
+    }
+
+    /* Floating Hearts */
+    function createHeart() {
+      const heart = document.createElement("div");
+      heart.classList.add("heart");
+      heart.innerHTML = "💗";
+      heart.style.left = Math.random() * 100 + "vw";
+      heart.style.animationDuration = (Math.random() * 3 + 2) + "s";
+
+      document.body.appendChild(heart);
+
+      setTimeout(() => {
+        heart.remove();
+      }, 5000);
+    }
+
+    setInterval(createHeart, 600);
+  </script>
+
+</body>
+</html>
